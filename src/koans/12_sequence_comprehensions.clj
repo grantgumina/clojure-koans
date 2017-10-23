@@ -3,7 +3,7 @@
 
 (meditations
   "Sequence comprehensions can bind each element in turn to a symbol"
-  (= __
+  (= '(0 1 2 3 4 5 6)
      (for [x (range 6)]
        x))
 
@@ -19,11 +19,11 @@
      (filter odd? (range 10))
      (for [x __ :when (odd? x)]
        x))
-
+ 
   "Combinations of these transformations is trivial"
   (= '(1 9 25 49 81)
      (map (fn [x] (* x x))
-          (filter odd? (range 10)))
+          (filter odd? (range 10)hr 
      (for [x (range 10) :when __]
        __))
 
